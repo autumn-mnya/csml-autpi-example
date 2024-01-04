@@ -87,11 +87,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="src\AutPI.cpp" />
     <ClCompile Include="src\Main.cpp" />
     <ClCompile Include="src\\mod_loader.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\AutPI.h" />
     <ClInclude Include="src\cave_story.h" />
+    <ClInclude Include="src\macros.h" />
     <ClInclude Include="src\Main.h" />
     <ClInclude Include="src\\mod_loader.h" />
     <ClInclude Include="src\\mod_loader_hooks.h" />

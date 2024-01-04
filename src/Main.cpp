@@ -5,21 +5,19 @@
 #include <string.h>
 #include <string>
 
+#include "AutPI.h"
 #include "mod_loader.h"
 #include "cave_story.h"
+#include "macros.h"
 
-static const char* const GameWindowName = "This replaces the Window Title!";
-
-// Changes the window title to the string above.
-void ExampleFunction(HWND hWnd)
+void PlayerTouchGroundExample()
 {
-	char window_name[0x100];
-
-	sprintf(window_name, "%s", GameWindowName);
-	SetWindowTextA(hWnd, window_name);
+	if (PLAYER_TOUCHING_GROUND && PLAYER_HAS_INPUT)
+		AddExpMyChar(1); // every frame the player is touching the ground, the game will gain 1 experience point.
 }
 
 void InitMod(void)
 {
-	ModLoader_WriteJump((void*)0x412320, (void*)ExampleFunction);
+	LoadAutPiDll(); // we need to load autpi.dll first before anything
+	RegisterActionElement(PlayerTouchGroundExample); // Register our custom code function as an "Action" element. "Action" elements are usually code like running the player code, the collision code, etc.
 }
