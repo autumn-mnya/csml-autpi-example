@@ -12,6 +12,7 @@
 
 void PlayerTouchGroundExample()
 {
+	// I used 2 "macros" for this if statement. The actual code would be "if ((gMC.flag & 8) && (g_GameFlags & 2))"
 	if (PLAYER_TOUCHING_GROUND && PLAYER_HAS_INPUT)
 		AddExpMyChar(1); // every frame the player is touching the ground, the game will gain 1 experience point.
 }
