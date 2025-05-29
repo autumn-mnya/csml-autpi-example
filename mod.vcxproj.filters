@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="src\AutPI.cpp" />
+    <ClCompile Include="src\Main.cpp" />
+    <ClCompile Include="src\\mod_loader.cpp" />
+    <ClCompile Include="src\lua\Lua.cpp">
+      <Filter>lua</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\AutPI.h" />
+    <ClInclude Include="src\cave_story.h" />
+    <ClInclude Include="src\macros.h" />
+    <ClInclude Include="src\Main.h" />
+    <ClInclude Include="src\\mod_loader.h" />
+    <ClInclude Include="src\\mod_loader_hooks.h" />
+    <ClInclude Include="src\lua\Lua.h">
+      <Filter>lua</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="lua">
+      <UniqueIdentifier>{fa609aa9-1949-4224-a197-31b161cdc20f}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

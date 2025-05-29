@@ -9,6 +9,7 @@
 #include "mod_loader.h"
 #include "cave_story.h"
 #include "macros.h"
+#include "lua/Lua.h"
 
 void PlayerTouchGroundExample()
 {
@@ -20,5 +21,7 @@ void PlayerTouchGroundExample()
 void InitMod(void)
 {
 	LoadAutPiDll(); // we need to load autpi.dll first before anything
+	RegisterLuaFuncElement(SetModLua); // set up custom lua code if you like that kind of thing
+	
 	RegisterActionElement(PlayerTouchGroundExample); // Register our custom code function as an "Action" element. "Action" elements are usually code like running the player code, the collision code, etc.
 }
