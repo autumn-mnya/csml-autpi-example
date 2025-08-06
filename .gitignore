@@ -1,15 +1,21 @@
 /.git
 /.vs
+/.vscode
+/import/.vscode
 /Debug
 /Release
 mod.vcxproj.user
 *.exp
-*.lib
 *.pdb
-*.dll
 
 CaveStory/fps
 CaveStory/mute
 CaveStory/Config.dat
 CaveStory/Profile.dat
 CaveStory/window.rect
+CaveStory/error.log
+/ZZ-FinalRelease
+!CaveStory/mods/autpi/autpi.dll
+!CaveStory/lua.dll
+!external/lua/lib/lua.lib
+CaveStory/lua_savefile.txt
